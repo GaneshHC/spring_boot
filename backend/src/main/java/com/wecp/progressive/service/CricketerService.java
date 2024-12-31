@@ -2,15 +2,16 @@ package com.wecp.progressive.service;
 
 import com.wecp.progressive.entity.Cricketer;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface CricketerService {
 
-    List<Cricketer> getAllCricketers();
+    List<Cricketer> getAllCricketers() throws SQLException;
 
-    Integer addCricketer(Cricketer cricketer);
+    Integer addCricketer(Cricketer cricketer)throws SQLException;
 
-    List<Cricketer> getAllCricketersSortedByExperience();
+    List<Cricketer> getAllCricketersSortedByExperience()throws SQLException;
 
     default void emptyArrayList() {
     }

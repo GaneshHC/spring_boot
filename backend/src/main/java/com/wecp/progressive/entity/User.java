@@ -1,12 +1,28 @@
 package com.wecp.progressive.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int user_id;
     private String full_name;
     private String username;
     private String password;
     private String email;
     private String role;
+    
+    public User(int user_id, String full_name, String username, String password, String email, String role) {
+        this.user_id = user_id;
+        this.full_name = full_name;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+    }
     public int getUser_id() {
         return user_id;
     }
